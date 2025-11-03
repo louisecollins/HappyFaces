@@ -1,7 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Star, ExternalLink } from "lucide-react";
-import { useEffect } from "react";
 
 const googleReviews = [
 	{
@@ -35,31 +34,6 @@ const googleReviews = [
 ];
 
 export function Reviews() {
-	useEffect(()	 => {
-		const scrollToHash = () => {
-			const hash = window.location.hash.slice(1);
-			if (hash) {
-				setTimeout(() => {
-					const element = document.getElementById(hash);
-					if (element) {
-						const offset = 80;
-						const elementPosition = element.getBoundingClientRect().top;
-						const offsetPosition = elementPosition + window.pageYOffset - offset;
-						window.scrollTo({
-							top: offsetPosition,
-							behavior: "smooth",
-						});
-					}
-				}, 100);
-			}
-		};
-
-		scrollToHash(); // On mount
-		window.addEventListener("hashchange", scrollToHash); // On hash change
-
-		return () => window.removeEventListener("hashchange", scrollToHash);
-	}, []);
-
 	return (
 		<section id="reviews" className="py-16 md:py-24 lg:py-32" data-testid="section-reviews">
 			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
