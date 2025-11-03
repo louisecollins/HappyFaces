@@ -1,40 +1,41 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Star, ExternalLink } from "lucide-react";
+import { useEffect } from "react";
 
 const googleReviews = [
-    {
-        rating: 5,
-        text: "Booked Happy Faces for my daughters christening and the service was outstanding. The kids absolutely loved it and they all looked amazing would highly recommend",
-        author: "Mark Hyland",
-        date: "3 days ago",
-        reviewerInfo: "Local Guide • 3 reviews",
-    },
-    {
-        rating: 5,
-        text: "Booked Happy Faces for my daughters birthday. Delighted with the service from from start to finish and Louise ensured there was 20 very happy children. Would highly recommend and will definitely be hiring again in near future",
-        author: "Gavin McGucken",
-        date: "2 weeks ago",
-        reviewerInfo: "1 review",
-    },
-    {
-        rating: 5,
-        text: "I had requested Louises' face painting service for my daughter's Birthday. She was fantastic and all kids thoroughly enjoyed get their face painted. I highly recommend Happy Faces. Thank you!",
-        author: "Divya sankarankutty",
-        date: "9 weeks ago",
-        reviewerInfo: "Local Guide • 37 reviews • 51 photos",
-    },
-    {
-        rating: 5,
-        text: "Booked with Happy Faces for my daughter's birthday party last week and was really glad I did. All the kids were delighted with their face paint, she was really brilliant helping a few nervous kids and settling them to get their faces painted, and made sure the 20 odd kids that wanted something done were sorted. Couldn't have wished for better",
-        author: "Seamus Nolan",
-        date: "9 weeks ago",
-        reviewerInfo: "1 review",
-    },
+	{
+		rating: 5,
+		text: "Booked Happy Faces for my daughters christening and the service was outstanding. The kids absolutely loved it and they all looked amazing would highly recommend",
+		author: "Mark Hyland",
+		date: "3 days ago",
+		reviewerInfo: "Local Guide • 3 reviews",
+	},
+	{
+		rating: 5,
+		text: "Booked Happy Faces for my daughters birthday. Delighted with the service from from start to finish and Louise ensured there was 20 very happy children. Would highly recommend and will definitely be hiring again in near future",
+		author: "Gavin McGucken",
+		date: "2 weeks ago",
+		reviewerInfo: "1 review",
+	},
+	{
+		rating: 5,
+		text: "I had requested Louises' face painting service for my daughter's Birthday. She was fantastic and all kids thoroughly enjoyed get their face painted. I highly recommend Happy Faces. Thank you!",
+		author: "Divya sankarankutty",
+		date: "9 weeks ago",
+		reviewerInfo: "Local Guide • 37 reviews • 51 photos",
+	},
+	{
+		rating: 5,
+		text: "Booked with Happy Faces for my daughter's birthday party last week and was really glad I did. All the kids were delighted with their face paint, she was really brilliant helping a few nervous kids and settling them to get their faces painted, and made sure the 20 odd kids that wanted something done were sorted. Couldn't have wished for better",
+		author: "Seamus Nolan",
+		date: "9 weeks ago",
+		reviewerInfo: "1 review",
+	},
 ];
 
 export function Reviews() {
-	useEffect(() => {
+	useEffect(()	 => {
 		const scrollToHash = () => {
 			const hash = window.location.hash.slice(1);
 			if (hash) {
