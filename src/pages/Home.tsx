@@ -31,7 +31,7 @@ export default function Home() {
     };
 
     scrollToHash(); // On mount
-    window.addEventListener("hashchange", scrollToHash); // On hash change
+    window.addEventListener("hashchange", scrollToHash);
 
     return () => window.removeEventListener("hashchange", scrollToHash);
   }, []);
