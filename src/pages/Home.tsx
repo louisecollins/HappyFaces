@@ -11,45 +11,40 @@ import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
 
 export default function Home() {
-  useEffect(() => {
-    const scrollToHash = () => {
-      const hash = window.location.hash.slice(1);
-      if (hash) {
-        setTimeout(() => {
-          const element = document.getElementById(hash);
-          if (element) {
-            const offset = 80;
-            const elementPosition = element.getBoundingClientRect().top;
-            const offsetPosition = elementPosition + window.pageYOffset - offset;
-            window.scrollTo({
-              top: offsetPosition,
-              behavior: "smooth",
-            });
-          }
-        }, 100);
-      }
-    };
+    // Handle scrolling to section when page loads with hash
+    useEffect(() => {
+        const hash = window.location.hash.slice(1); // Remove the # symbol
+        if (hash) {
+            // Wait a moment for page to render
+            setTimeout(() => {
+                const element = document.getElementById(hash);
+                if (element) {
+                    const offset = 80;
+                    const elementPosition = element.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - offset;
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: "smooth",
+                    });
+                }
+            }, 100);
+        }
+    }, []);
 
-    scrollToHash(); // On mount
-    window.addEventListener("hashchange", scrollToHash);
-
-    return () => window.removeEventListener("hashchange", scrollToHash);
-  }, []);
-
-  return (
-    <div className="min-h-screen">
-      <Navigation />
-      <main>
-        <Hero />
-        <About />
-        <Services />
-        <Gallery />
-        <Reviews />
-        <Events />
-        <BookingForm />
-        <Contact />
-      </main>
-      <Footer />
-    </div>
-  );
+    return (
+        <div className="min-h-screen">
+            <Navigation />
+            <main>
+                <Hero />
+                <About />
+                <Services />
+                <Gallery />
+                <Reviews />
+                <Events />
+                <BookingForm />
+                <Contact />
+            </main>
+            <Footer />
+        </div>
+    );
 }
