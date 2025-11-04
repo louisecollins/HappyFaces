@@ -25,7 +25,7 @@ export function About() {
                 data-testid="image-profile"
               />
               <p className="text-xl md:text-2xl font-semibold text-primary text-center md:text-left">
-                Hi, I'm Louise — the face behind Happy Faces Belfast! 🎨
+                Hi, I'm Louise Collins — the face behind Happy Faces Belfast! 🎨
               </p>
             </div>
 
