@@ -1,8 +1,10 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
+import path from "node:path";
 
-// If your index.html is at the project root (it is), this is enough.
-// Output will go to ./dist by default.
 export default defineConfig({
-    plugins: [react()]
+    plugins: [react()],
+    resolve: {
+        alias: { "@": path.resolve(__dirname, "src") }
+    }
 });

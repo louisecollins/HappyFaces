@@ -1,7 +1,9 @@
 import { useState, useRef, useEffect } from "react";
+import { useQuery } from "@tanstack/react-query";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
+import type { GalleryItem } from "@shared/schema";
 
 // Real face painting work photos
 import tiger from "@assets/496152960_9411545818955307_4236555642598842777_n_1761149402381.jpg";
@@ -16,9 +18,6 @@ import fish from "@assets/481098942_976556507910211_2220721328263584107_n_176114
 import roses from "@assets/download (2)_1761149402379.png";
 import floralLeg from "@assets/496006710_9394168310693058_3140310858811802582_n_1761149402375.jpg";
 import eyeDesign from "@assets/497006887_9392743334168889_4139047862030730421_n_1761149402380.jpg";
-import clown from "@assets/576343221_1164484135784113_1644491298300390321_n";
-import clown2 from "@assets/576481087_1164490185783508_976819221129076280_n;
-import greenWitch from "@assets/481276212_976254521273743_3792211147195761437_n";
 
 export function Gallery() {
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -26,7 +25,11 @@ export function Gallery() {
   const [isHovered, setIsHovered] = useState(false);
   const scrollContainerRef = useRef<HTMLDivElement>(null);
 
-  const galleryItems = [
+  const { data: dbGalleryItems } = useQuery<{ success: boolean; data: GalleryItem[] }>({
+    queryKey: ["/api/gallery"],
+  });
+
+  const hardcodedItems = [
     { image: tiger, title: "Tiger Face Paint", category: "Animals" },
     { image: spiderman1, title: "Spider-Man", category: "Superheroes" },
     { image: spiderman2, title: "Spider-Man Duo", category: "Superheroes" },
@@ -39,10 +42,15 @@ export function Gallery() {
     { image: roses, title: "Rose Garden", category: "Floral" },
     { image: floralLeg, title: "Floral Leg Design", category: "Floral" },
     { image: eyeDesign, title: "Eye Swirl Design", category: "Fantasy" },
-      { image: clown, title: "Clown Design", category: "Fantasy" },
-      { image: clown2, title: "Clown Design", category: "Fantasy" },
-      { image: greenWitch, title: "Witch Design", category: "Fantasy" },
   ];
+
+  const dbItems = dbGalleryItems?.data?.map(item => ({
+    image: item.imageUrl,
+    title: item.title,
+    category: item.category,
+  })) || [];
+
+  const galleryItems = [...hardcodedItems, ...dbItems];
 
   const categories = ["All", "Animals", "Fantasy", "Superheroes", "Special Effects", "Sports", "Floral"];
 
