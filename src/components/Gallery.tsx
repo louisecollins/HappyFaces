@@ -40,6 +40,19 @@ export function Gallery() {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
 
   const galleryItems = [
+    { image: rainbowFace, title: "Rainbow Face", category: "Fantasy" },
+    { image: clownGirl, title: "Clown Design", category: "Fantasy" },
+    { image: bunnyArm, title: "Bunny Arm Design", category: "Fantasy" },
+    { image: xmasGingerbreadGirl, title: "Gingerbread", category: "Christmas" },
+    { image: xmasSnowman, title: "Snowman", category: "Christmas" },
+    { image: xmasHollyBoy, title: "Holly and Candy Cane", category: "Christmas" },
+    { image: xmasSnowmanBoy, title: "Snowman Cheek Design", category: "Christmas" },
+    { image: xmasPenguinArm, title: "Penguin Arm Design", category: "Christmas" },
+    { image: xmasPenguin, title: "Penguin", category: "Christmas" },
+    { image: xmasHollyPair, title: "Holly Designs", category: "Christmas" },
+    { image: xmasBaubles, title: "Christmas Baubles", category: "Christmas" },
+    { image: xmasGingerbread, title: "Gingerbread Cheek Design", category: "Christmas" },
+    { image: xmasReindeer, title: "Reindeer", category: "Christmas" },
     { image: tiger, title: "Tiger Face Paint", category: "Animals" },
     { image: spiderman1, title: "Spider-Man", category: "Superheroes" },
     { image: spiderman2, title: "Spider-Man Duo", category: "Superheroes" },
