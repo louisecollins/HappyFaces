@@ -11,11 +11,11 @@ const faqs = [
   },
   {
     q: "How much does face painting cost?",
-    a: "Every event is different, so I give a personal quote based on your date, location and how many children you expect. Send a quote request or get in touch and I'll come back to you with a clear price.",
+    a: "My rates are charged per hour, and every event is different, so I give a personal quote based on your date, location and how many children you expect. Send a quote request or get in touch and I'll come back to you with a clear price.",
   },
   {
     q: "How long should I book for?",
-    a: "As a guide, one hour suits fewer than 15 children, two hours suits 15 to 30 children, and three hours suits larger groups of more than 30. Not sure? Tell me about your event and I'll recommend the right length.",
+    a: "I allow about one hour for every 15 children, so a party of 30 would need two hours. The minimum booking is one hour, and after that I can book in half hours. Not sure? Tell me about your event and I'll recommend the right length.",
   },
   {
     q: "What kinds of events do you cover?",
@@ -23,7 +23,11 @@ const faqs = [
   },
   {
     q: "Where do you travel to?",
-    a: "I'm based in Belfast. Tell me your venue or postcode in the quote request and I'll confirm I can get there.",
+    a: "I'm based in Belfast and cover the Belfast area. Travel costs may apply for events outside Belfast, so tell me your venue or postcode in the quote request and I'll confirm.",
+  },
+  {
+    q: "Can you paint at an outdoor event?",
+    a: "Yes. Outdoor events need adequate cover from sun and rain. Please let me know in advance that it's outdoors, so I can bring the right kit and supplies.",
   },
   {
     q: "Are you insured?",
