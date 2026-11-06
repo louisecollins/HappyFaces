@@ -9,7 +9,7 @@ import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
-import { insertBookingRequestSchema } from "@shared/schema";
+import { insertBookingRequestSchema } from "@/lib/schema";
 import { apiRequest } from "@/lib/queryClient";
 import { ChevronLeft, ChevronRight, CheckCircle } from "lucide-react";
 
