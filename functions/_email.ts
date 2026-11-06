@@ -38,7 +38,7 @@ ${data.phone ? `- Phone: ${data.phone}` : ""}
     });
     if (error) {
         console.error("Resend error:", error);
-        throw new Error(`Email failed: ${error.message}`);
+        throw new Error(`Email failed: ${error.message} [TEMP DIAG key length ${env.RESEND_API_KEY?.length ?? 0}, starts re_: ${String(env.RESEND_API_KEY).startsWith("re_")}, has whitespace: ${/s/.test(String(env.RESEND_API_KEY))}]`);
     }
 }
 
@@ -94,6 +94,6 @@ Reply directly to this email to respond to ${data.name}.
     });
     if (error) {
         console.error("Resend error:", error);
-        throw new Error(`Email failed: ${error.message}`);
+        throw new Error(`Email failed: ${error.message} [TEMP DIAG key length ${env.RESEND_API_KEY?.length ?? 0}, starts re_: ${String(env.RESEND_API_KEY).startsWith("re_")}, has whitespace: ${/s/.test(String(env.RESEND_API_KEY))}]`);
     }
 }
