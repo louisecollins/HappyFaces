@@ -8,7 +8,7 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
-import { insertContactMessageSchema } from "@shared/schema";
+import { insertContactMessageSchema } from "@/lib/schema";
 import { apiRequest } from "@/lib/queryClient";
 import { Mail, Phone, MapPin, Send, MessageCircle } from "lucide-react";
 

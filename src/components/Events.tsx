@@ -1,16 +1,13 @@
-import { useQuery } from "@tanstack/react-query";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Calendar, MapPin, Clock, Loader2 } from "lucide-react";
-import type { Event } from "@shared/schema";
+import { Calendar, MapPin, Clock } from "lucide-react";
+import type { Event } from "@/lib/schema";
+
+// Add public events here, e.g.
+// { title: "Summer Fun Day", venue: "Falls Park", location: "Belfast", date: "Saturday, 12th July", time: "11am - 3pm", description: "Face painting for all ages" }
+const upcomingEvents: Event[] = [];
 
 export function Events() {
-  const { data, isLoading, error } = useQuery<{ success: boolean; data: Event[] }>({
-    queryKey: ["/api/events"],
-  });
-
-  const upcomingEvents = data?.data || [];
-
   return (
     <section id="events" className="py-16 md:py-24 lg:py-32 bg-accent/20" data-testid="section-events">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -26,19 +23,7 @@ export function Events() {
           </p>
         </div>
 
-        {isLoading && (
-          <div className="flex items-center justify-center py-12">
-            <Loader2 className="w-8 h-8 animate-spin text-primary" />
-          </div>
-        )}
-
-        {error && (
-          <div className="text-center py-12">
-            <p className="text-muted-foreground">Unable to load events. Please try again later.</p>
-          </div>
-        )}
-
-        {!isLoading && !error && upcomingEvents.length === 0 && (
+        {upcomingEvents.length === 0 && (
           <Card className="max-w-2xl mx-auto">
             <CardContent className="p-8 md:p-12 text-center">
               <Calendar className="w-16 h-16 mx-auto mb-4 text-muted-foreground/40" />
@@ -55,7 +40,7 @@ export function Events() {
           </Card>
         )}
 
-        {!isLoading && !error && upcomingEvents.length > 0 && (
+        {upcomingEvents.length > 0 && (
           <div className="space-y-6 max-w-4xl mx-auto">
             {upcomingEvents.map((event, index) => (
             <Card key={index} className="overflow-hidden hover-elevate" data-testid={`card-event-${index}`}>
