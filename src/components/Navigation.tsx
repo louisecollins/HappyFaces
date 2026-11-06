@@ -44,6 +44,7 @@ export function Navigation() {
     { label: "Gallery", section: "gallery", isPage: false },
     { label: "Reviews", section: "reviews", isPage: false },
     { label: "Events", section: "events", isPage: false },
+    { label: "FAQ", section: "faq", isPage: false },
     { label: "Contact", section: "contact", isPage: false },
   ];
 

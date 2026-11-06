@@ -6,6 +6,7 @@ import { Services } from "@/components/Services";
 import { Gallery } from "@/components/Gallery";
 import { Reviews } from "@/components/Reviews";
 import { Events } from "@/components/Events";
+import { FAQ } from "@/components/FAQ";
 import { BookingForm } from "@/components/BookingForm";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
@@ -41,6 +42,7 @@ export default function Home() {
         <Gallery />
         <Reviews />
         <Events />
+        <FAQ />
         <BookingForm />
         <Contact />
       </main>
