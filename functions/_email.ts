@@ -29,13 +29,17 @@ CONTACT INFORMATION:
 ${data.phone ? `- Phone: ${data.phone}` : ""}
   `.trim();
 
-    await resend.emails.send({
+    const { error } = await resend.emails.send({
         from: "Happy Faces Belfast <onboarding@resend.dev>",
         to: "happy_faces@hotmail.co.uk",
         replyTo: data.email,
         subject: `New Contact Message from ${data.name}`,
         text: emailBody,
     });
+    if (error) {
+        console.error("Resend error:", error);
+        throw new Error(`Email failed: ${error.message}`);
+    }
 }
 
 // --- BOOKING REQUEST EMAIL ---
@@ -81,11 +85,15 @@ ${data.specialRequests ? `SPECIAL REQUESTS:\n${data.specialRequests}` : "No spec
 Reply directly to this email to respond to ${data.name}.
   `.trim();
 
-    await resend.emails.send({
+    const { error } = await resend.emails.send({
         from: "Happy Faces Belfast <onboarding@resend.dev>",
         to: "happy_faces@hotmail.co.uk",
         replyTo: data.email,
         subject: `New Booking Request from ${data.name}`,
         text: emailBody,
     });
+    if (error) {
+        console.error("Resend error:", error);
+        throw new Error(`Email failed: ${error.message}`);
+    }
 }
