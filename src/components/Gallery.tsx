@@ -2,6 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
+import { isChristmasSeason } from "@/lib/season";
 
 // Real face painting work photos
 import tiger from "@assets/496152960_9411545818955307_4236555642598842777_n_1761149402381.webp";
@@ -34,7 +35,7 @@ import xmasGingerbread from "@assets/photos/xmas_gingerbread.webp";
 import xmasReindeer from "@assets/photos/xmas_reindeer.webp";
 
 export function Gallery() {
-  const [selectedCategory, setSelectedCategory] = useState("All");
+  const [selectedCategory, setSelectedCategory] = useState(isChristmasSeason() ? "Christmas" : "All");
   const [lightboxImage, setLightboxImage] = useState<number | null>(null);
   const [isHovered, setIsHovered] = useState(false);
   const scrollContainerRef = useRef<HTMLDivElement>(null);

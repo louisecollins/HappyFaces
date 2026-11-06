@@ -11,6 +11,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { insertBookingRequestSchema } from "@/lib/schema";
 import { apiRequest } from "@/lib/queryClient";
+import { isChristmasSeason } from "@/lib/season";
 import { ChevronLeft, ChevronRight, CheckCircle } from "lucide-react";
 
 // About 1 hour per 15 children, in half-hour steps, minimum 1 hour.
@@ -219,6 +220,7 @@ export function BookingForm() {
                             </FormControl>
                             <SelectContent>
                               <SelectItem value="Birthday Party">Birthday Party</SelectItem>
+                              {isChristmasSeason() && <SelectItem value="Christmas Party">Christmas Party</SelectItem>}
                               <SelectItem value="Communion Party">Communion Party</SelectItem>
                               <SelectItem value="Christening Party">Christening Party</SelectItem>
                               <SelectItem value="Community Event">Community Event</SelectItem>
