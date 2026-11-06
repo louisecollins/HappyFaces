@@ -1,6 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Shield } from "lucide-react";
-import louisePhoto from "@assets/f3eb7900-b9cc-4ee1-825d-e70b55b90da7_1761205448052.jpg";
+import louisePhoto from "@assets/f3eb7900-b9cc-4ee1-825d-e70b55b90da7_1761205448052.webp";
 
 export function About() {
   return (
@@ -18,7 +18,7 @@ export function About() {
         <Card className="overflow-hidden">
           <CardContent className="p-6 md:p-8 lg:p-12 space-y-6 text-base md:text-lg text-foreground leading-relaxed">
             <div className="flex flex-col md:flex-row items-center gap-6 md:gap-8 mb-4">
-              <img 
+              <img loading="lazy" decoding="async" 
                 src={louisePhoto} 
                 alt="Louise - Happy Faces Belfast"
                 className="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover border-4 border-primary/20"

@@ -1,7 +1,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Cake, Users, Briefcase, Heart } from "lucide-react";
-import birthdayImage from "@assets/generated_images/Birthday_party_face_painting_scene_fe6caa52.png";
-import festivalImage from "@assets/generated_images/Community_festival_booth_scene_fd2ae5cb.png";
+import birthdayImage from "@assets/generated_images/Birthday_party_face_painting_scene_fe6caa52.webp";
+import festivalImage from "@assets/generated_images/Community_festival_booth_scene_fd2ae5cb.webp";
 
 export function Services() {
   const services = [
@@ -60,7 +60,7 @@ export function Services() {
                 data-testid={`card-service-${service.testId}`}
               >
                 <div className="relative h-48 overflow-hidden">
-                  <img
+                  <img loading="lazy" decoding="async"
                     src={service.image}
                     alt={service.title}
                     className="w-full h-full object-cover"

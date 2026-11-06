@@ -4,21 +4,21 @@ import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 
 // Real face painting work photos
-import tiger from "@assets/496152960_9411545818955307_4236555642598842777_n_1761149402381.jpg";
-import skeleton1 from "@assets/481245689_976254464607082_595279953436100737_n_1761149402376.jpg";
-import skeleton2 from "@assets/482203702_976254364607092_3094305187430253445_n_1761149402376.jpg";
-import spiderman1 from "@assets/496594843_9392743620835527_3526028665122173163_n_1761149402380.jpg";
-import spiderman2 from "@assets/download (1)_1761149402379.png";
-import butterfly1 from "@assets/481237075_976650457900816_6483569182094487567_n_1761149402380.jpg";
-import butterfly2 from "@assets/481198199_976558151243380_568436406436809459_n_1761149402378.jpg";
-import soccerBall from "@assets/496252948_9395670717209484_5871869548130301651_n_1761149402376.jpg";
-import fish from "@assets/481098942_976556507910211_2220721328263584107_n_1761149402378.jpg";
-import roses from "@assets/download (2)_1761149402379.png";
-import floralLeg from "@assets/496006710_9394168310693058_3140310858811802582_n_1761149402375.jpg";
-import eyeDesign from "@assets/497006887_9392743334168889_4139047862030730421_n_1761149402380.jpg";
-import clown from "@assets/576343221_1164484135784113_1644491298300390321_n.jpg";
-import clown2 from "@assets/576481087_1164490185783508_976819221129076280_n.jpg";
-import greenWitch from "@assets/481276212_976254521273743_3792211147195761437_n.jpg";
+import tiger from "@assets/496152960_9411545818955307_4236555642598842777_n_1761149402381.webp";
+import skeleton1 from "@assets/481245689_976254464607082_595279953436100737_n_1761149402376.webp";
+import skeleton2 from "@assets/482203702_976254364607092_3094305187430253445_n_1761149402376.webp";
+import spiderman1 from "@assets/496594843_9392743620835527_3526028665122173163_n_1761149402380.webp";
+import spiderman2 from "@assets/download (1)_1761149402379.webp";
+import butterfly1 from "@assets/481237075_976650457900816_6483569182094487567_n_1761149402380.webp";
+import butterfly2 from "@assets/481198199_976558151243380_568436406436809459_n_1761149402378.webp";
+import soccerBall from "@assets/496252948_9395670717209484_5871869548130301651_n_1761149402376.webp";
+import fish from "@assets/481098942_976556507910211_2220721328263584107_n_1761149402378.webp";
+import roses from "@assets/download (2)_1761149402379.webp";
+import floralLeg from "@assets/496006710_9394168310693058_3140310858811802582_n_1761149402375.webp";
+import eyeDesign from "@assets/497006887_9392743334168889_4139047862030730421_n_1761149402380.webp";
+import clown from "@assets/576343221_1164484135784113_1644491298300390321_n.webp";
+import clown2 from "@assets/576481087_1164490185783508_976819221129076280_n.webp";
+import greenWitch from "@assets/481276212_976254521273743_3792211147195761437_n.webp";
 
 export function Gallery() {
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -153,7 +153,7 @@ export function Gallery() {
                   className="group relative aspect-square overflow-hidden rounded-xl hover-elevate transition-all duration-300 hover:scale-105 w-full block"
                   data-testid={`button-gallery-item-${index}`}
                 >
-                  <img
+                  <img loading="lazy" decoding="async"
                     src={item.image}
                     alt={item.title}
                     className="w-full h-full object-cover"
@@ -185,7 +185,7 @@ export function Gallery() {
               </Button>
 
               <div className="relative aspect-square max-h-[85vh]">
-                <img
+                <img loading="lazy" decoding="async"
                   src={filteredItems[lightboxImage].image}
                   alt={filteredItems[lightboxImage].title}
                   className="w-full h-full object-contain"

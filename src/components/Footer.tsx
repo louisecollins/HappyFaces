@@ -58,7 +58,7 @@ export function Footer() {
                 asChild
                 data-testid="button-facebook"
               >
-                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.facebook.com/HappyFacesBelfast/" target="_blank" rel="noopener noreferrer">
                   <Facebook className="w-5 h-5" />
                 </a>
               </Button>

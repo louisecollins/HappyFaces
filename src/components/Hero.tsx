@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Sparkles, Calendar, Shield, Phone } from "lucide-react";
-import heroImage from "@assets/generated_images/Professional_face_painting_event_scene_9a9dba86.png";
+import heroImage from "@assets/generated_images/Professional_face_painting_event_scene_9a9dba86.webp";
 
 export function Hero() {
   const scrollToSection = (sectionId: string) => {
