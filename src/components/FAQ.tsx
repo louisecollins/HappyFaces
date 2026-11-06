@@ -30,6 +30,10 @@ const faqs = [
     a: "It can help. For example, if your party room is booked for one hour and the children then have to move to a separate food room, booking two painters for one hour is often better than one painter for two hours. Everyone gets painted before it's time to eat, and it's easier for everyone. Tell me about your venue and timings and I'll recommend what works best.",
   },
   {
+    q: "Not sure how many children are coming?",
+    a: "That's ok, I'm pretty flexible. I suggest booking for the most you expect. If fewer children turn up, or some don't want to be painted, I only charge for the time we use. Or I can stay for the full time if the children want seconds or thirds. I'll always agree with you before staying or leaving.",
+  },
+  {
     q: "What do you need at the venue?",
     a: "I bring my own chair, but I do ask for an adequate sized table to be provided at the venue.",
   },
