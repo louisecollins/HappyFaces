@@ -19,6 +19,19 @@ import eyeDesign from "@assets/497006887_9392743334168889_4139047862030730421_n_
 import clown from "@assets/576343221_1164484135784113_1644491298300390321_n.webp";
 import clown2 from "@assets/576481087_1164490185783508_976819221129076280_n.webp";
 import greenWitch from "@assets/481276212_976254521273743_3792211147195761437_n.webp";
+import rainbowFace from "@assets/photos/hero_rainbow_face.webp";
+import clownGirl from "@assets/photos/hero_clown_girl.webp";
+import bunnyArm from "@assets/photos/hero_bunny_arm.webp";
+import xmasGingerbreadGirl from "@assets/photos/xmas_gingerbread_girl.webp";
+import xmasSnowman from "@assets/photos/xmas_snowman.webp";
+import xmasHollyBoy from "@assets/photos/xmas_holly_boy.webp";
+import xmasSnowmanBoy from "@assets/photos/xmas_snowman_boy.webp";
+import xmasPenguinArm from "@assets/photos/xmas_penguin_arm.webp";
+import xmasPenguin from "@assets/photos/xmas_penguin.webp";
+import xmasHollyPair from "@assets/photos/xmas_holly_pair.webp";
+import xmasBaubles from "@assets/photos/xmas_baubles.webp";
+import xmasGingerbread from "@assets/photos/xmas_gingerbread.webp";
+import xmasReindeer from "@assets/photos/xmas_reindeer.webp";
 
 export function Gallery() {
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -27,6 +40,19 @@ export function Gallery() {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
 
   const galleryItems = [
+    { image: rainbowFace, title: "Rainbow Face", category: "Fantasy" },
+    { image: clownGirl, title: "Clown Design", category: "Fantasy" },
+    { image: bunnyArm, title: "Bunny Arm Design", category: "Fantasy" },
+    { image: xmasGingerbreadGirl, title: "Gingerbread", category: "Christmas" },
+    { image: xmasSnowman, title: "Snowman", category: "Christmas" },
+    { image: xmasHollyBoy, title: "Holly and Candy Cane", category: "Christmas" },
+    { image: xmasSnowmanBoy, title: "Snowman Cheek Design", category: "Christmas" },
+    { image: xmasPenguinArm, title: "Penguin Arm Design", category: "Christmas" },
+    { image: xmasPenguin, title: "Penguin", category: "Christmas" },
+    { image: xmasHollyPair, title: "Holly Designs", category: "Christmas" },
+    { image: xmasBaubles, title: "Christmas Baubles", category: "Christmas" },
+    { image: xmasGingerbread, title: "Gingerbread Cheek Design", category: "Christmas" },
+    { image: xmasReindeer, title: "Reindeer", category: "Christmas" },
     { image: tiger, title: "Tiger Face Paint", category: "Animals" },
     { image: spiderman1, title: "Spider-Man", category: "Superheroes" },
     { image: spiderman2, title: "Spider-Man Duo", category: "Superheroes" },
@@ -44,7 +70,7 @@ export function Gallery() {
     { image: greenWitch, title: "Witch Design", category: "Fantasy" },
   ];
 
-  const categories = ["All", "Animals", "Fantasy", "Superheroes", "Special Effects", "Sports", "Floral"];
+  const categories = ["All", "Animals", "Fantasy", "Superheroes", "Special Effects", "Sports", "Floral", "Christmas"];
 
   const filteredItems = selectedCategory === "All"
     ? galleryItems

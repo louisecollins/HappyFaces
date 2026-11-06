@@ -25,22 +25,22 @@ export function About() {
                 data-testid="image-profile"
               />
               <p className="text-xl md:text-2xl font-semibold text-primary text-center md:text-left">
-                Hi, I'm Louise — the face behind Happy Faces Belfast! 🎨
+                Hi, I'm Louise, the face behind Happy Faces Belfast! 🎨
               </p>
             </div>
 
             <p>
-              I've been face painting since 2010, and over the years I've had the joy of bringing colour, sparkle, and smiles to every kind of occasion — from birthday parties and festivals to corporate events, hen parties, communions, and christenings. No party is ever too big or too small!
+              I've been face painting since 2010, and over the years I've had the joy of bringing colour, sparkle, and smiles to every kind of occasion, from birthday parties and festivals to corporate events, hen parties, communions, and christenings. No party is ever too big or too small!
             </p>
 
             <p>
-              Face painting is more than just a job for me — it's a passion. I love the creativity, the laughter, and seeing that moment when someone looks in the mirror and their eyes light up. I'm always up for a challenge and love trying out new designs to keep things fresh and exciting. With my own kids keeping me in the loop, I stay up to date with the latest trends (they're quick to tell me what's in and what's not!).
+              Face painting is more than just a job for me. It's a passion. I love the creativity, the laughter, and seeing that moment when someone looks in the mirror and their eyes light up. I'm always up for a challenge and love trying out new designs to keep things fresh and exciting. With my own kids keeping me in the loop, I stay up to date with the latest trends (they're quick to tell me what's in and what's not!).
             </p>
 
             <div className="bg-accent/20 border-l-4 border-primary p-4 md:p-6 rounded-md flex items-start gap-3">
               <Shield className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
               <p className="text-foreground">
-                Your safety and comfort are important to me — I'm fully insured with Public Liability insurance, and my certificate can be provided upon request.
+                Your safety and comfort are important to me. I'm fully insured with Public Liability insurance, and my certificate can be provided upon request.
               </p>
             </div>
 

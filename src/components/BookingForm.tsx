@@ -243,7 +243,8 @@ export function BookingForm() {
                               {...field}
                               onChange={(e) => {
                                 const value = e.target.value;
-                                field.onChange(value === "" ? 1 : parseInt(value) || 1);
+                                const parsed = parseInt(value, 10);
+                                field.onChange(Number.isNaN(parsed) ? "" : parsed);
                               }}
                               value={field.value}
                               data-testid="input-number-children"
