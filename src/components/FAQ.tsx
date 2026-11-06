@@ -26,12 +26,16 @@ const faqs = [
     a: "I'm based in Belfast and cover the Belfast area. Travel costs may apply for events outside Belfast, so tell me your venue or postcode in the quote request and I'll confirm.",
   },
   {
+    q: "Should I book more than one painter?",
+    a: "It can help. For example, if your party room is booked for one hour and the children then have to move to a separate food room, booking two painters for one hour is often better than one painter for two hours. Everyone gets painted before it's time to eat, and it's easier for everyone. Tell me about your venue and timings and I'll recommend what works best.",
+  },
+  {
     q: "Can you paint at an outdoor event?",
     a: "Yes. Outdoor events need adequate cover from sun and rain. Please let me know in advance that it's outdoors, so I can bring the right kit and supplies.",
   },
   {
     q: "Are you insured?",
-    a: "Yes. I'm fully insured with Public Liability insurance, and my certificate can be provided on request.",
+    a: "Yes. I'm fully insured with Public Liability insurance. Venues such as leisure centres often ask for proof of this, and my certificate can be provided on request.",
   },
   {
     q: "How experienced are you?",
