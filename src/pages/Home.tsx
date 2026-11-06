@@ -1,6 +1,8 @@
 import { useEffect } from "react";
 import { Navigation } from "@/components/Navigation";
 import { Hero } from "@/components/Hero";
+import { ChristmasPromo } from "@/components/ChristmasPromo";
+import { isChristmasSeason } from "@/lib/season";
 import { About } from "@/components/About";
 import { Services } from "@/components/Services";
 import { Gallery } from "@/components/Gallery";
@@ -37,6 +39,7 @@ export default function Home() {
       <Navigation />
       <main>
         <Hero />
+        {isChristmasSeason() && <ChristmasPromo />}
         <About />
         <Services />
         <Gallery />
