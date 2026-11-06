@@ -13,6 +13,14 @@ import { insertBookingRequestSchema } from "@/lib/schema";
 import { apiRequest } from "@/lib/queryClient";
 import { ChevronLeft, ChevronRight, CheckCircle } from "lucide-react";
 
+// About 1 hour per 15 children, in half-hour steps, minimum 1 hour.
+function recommendedDuration(children: number): string {
+  const n = Number(children) || 0;
+  const hours = Math.max(1, Math.ceil((n / 15) * 2) / 2);
+  if (hours >= 4) return "4+ hours";
+  return hours === 1 ? "1 hour" : `${hours} hours`;
+}
+
 export function BookingForm() {
   const [step, setStep] = useState(1);
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -37,13 +45,7 @@ export function BookingForm() {
   const numberOfChildren = form.watch("numberOfChildren");
 
   useEffect(() => {
-    if (numberOfChildren < 15) {
-      form.setValue("duration", "1 hour");
-    } else if (numberOfChildren >= 15 && numberOfChildren <= 30) {
-      form.setValue("duration", "2 hours");
-    } else if (numberOfChildren > 30) {
-      form.setValue("duration", "3 hours");
-    }
+    form.setValue("duration", recommendedDuration(numberOfChildren));
   }, [numberOfChildren, form]);
 
   const mutation = useMutation({
@@ -272,15 +274,16 @@ export function BookingForm() {
                             </FormControl>
                             <SelectContent>
                               <SelectItem value="1 hour">1 hour</SelectItem>
+                              <SelectItem value="1.5 hours">1.5 hours</SelectItem>
                               <SelectItem value="2 hours">2 hours</SelectItem>
+                              <SelectItem value="2.5 hours">2.5 hours</SelectItem>
                               <SelectItem value="3 hours">3 hours</SelectItem>
+                              <SelectItem value="3.5 hours">3.5 hours</SelectItem>
                               <SelectItem value="4+ hours">4+ hours</SelectItem>
                             </SelectContent>
                           </Select>
                           <FormDescription>
-                            {numberOfChildren < 15 && "Recommended: 1 hour (up to 15 children)"}
-                            {numberOfChildren >= 15 && numberOfChildren <= 30 && "Recommended: 2 hours (15-30 children)"}
-                            {numberOfChildren > 30 && "Recommended: 3 hours (30+ children)"}
+                            {`Recommended: ${recommendedDuration(numberOfChildren)} (about 1 hour per 15 children). Half hours available after the 1 hour minimum.`}
                           </FormDescription>
                           <FormMessage />
                         </FormItem>

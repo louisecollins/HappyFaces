@@ -15,7 +15,7 @@ const faqs = [
   },
   {
     q: "How long should I book for?",
-    a: "I allow about one hour for every 15 children, so a party of 30 would need two hours. The minimum booking is one hour, and after that I can book in half hours. Not sure? Tell me about your event and I'll recommend the right length.",
+    a: "I allow about one hour for every 15 children, so a party of 30 would need two hours. The minimum booking is one hour, and after that I can book in half hours, such as 1.5 or 2.5 hours. Not sure? Tell me about your event and I'll recommend the right length.",
   },
   {
     q: "What kinds of events do you cover?",
@@ -28,6 +28,14 @@ const faqs = [
   {
     q: "Should I book more than one painter?",
     a: "It can help. For example, if your party room is booked for one hour and the children then have to move to a separate food room, booking two painters for one hour is often better than one painter for two hours. Everyone gets painted before it's time to eat, and it's easier for everyone. Tell me about your venue and timings and I'll recommend what works best.",
+  },
+  {
+    q: "What do you need at the venue?",
+    a: "I bring my own chair, but I do ask for an adequate sized table to be provided at the venue.",
+  },
+  {
+    q: "Is there an age limit?",
+    a: "Children under the age of 3 can't be painted, for insurance reasons. Adults can be painted on request.",
   },
   {
     q: "Can you paint at an outdoor event?",
